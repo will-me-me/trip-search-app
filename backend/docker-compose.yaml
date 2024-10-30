@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  express-backend:
+    container_name: express-backend
+    build: .
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./:/app
+    environment:
+      - NODE_ENV=development
